@@ -77,5 +77,51 @@ We always want to automate our enviornment and builds whenever possible.
 * Better docs
 * Easy to learn, simple
 
+## TRANSPILERS
+Build Script JS Style comparisons:
 
+|              __ES5__              |                   __Transpiled__                  |
+|:---------------------------------:|:-------------------------------------------------:|
+| No waiting for transpile = faster | Enjoy the latest JS features                      |
+| No transpiler dependency          | Consistent coding style                           |
+|                                   | Use the same linting rules everywhere             |
+|                                   | Can eventually remove transpiler (as JS improves) |
+
+Popular transpilers (won't cover them all here):
+
+#### Babel
+* Modern, standards-based JS, today (standardized JS
+* Enjoy all the new features of JS
+* Transpiles the latest version of JS down to ES5
+* Leverage full JS ecosystem
+* Use experimental JS features earlier
+* No type defs, annotations required
+* ES6 imports are statically analyzable (editor can deterministically index entire code base and provide reliable intellisense support)
+* Test, Lint, Babel, Great libs, IDE = safety
+
+Two configuration styles: 
+`.babelrc` 
+* Dedicated babel configuration file placed in project route
+* Easier to read since it's isolated 
+
+`package.json`
+* One less file to your project
+
+__PRESETS__ (transpile for your environment)
+`babel-preset-es2015-node` - Version Detection
+`babel-preset-latest-minimal - Feature Detection 
+ 
+#### TypeScript
+* Superset of JS
+* Type annotations (additional type safety)
+* Enhanced autocompletion / readability
+* Clearer intent
+* some tools can't use TypeScript
+#### Elm
+* Compiles down to JS
+* Clean Syntax
+* Immutable data structures
+* Friendly errors
+* All errors are compile-time errors
+* Interops with JS (you don't have to use elm for everything)
 
