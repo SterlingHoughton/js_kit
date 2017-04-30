@@ -51,7 +51,7 @@ __Best times to run security checks on packages:__
 #### now
 * Easy way to deploy apps to the cloud, supports nodejs projects. No firewall hole, hosting persists.
 
-##AUTOMATION
+## AUTOMATION
 We always want to automate our enviornment and builds whenever possible.
 
 #### Grunt
