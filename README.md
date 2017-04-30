@@ -22,11 +22,11 @@ Options for security check:
 installed globally.
 
 __Best times to run security checks on packages:__
-&nbsp;&nbsp;&nbsp;&nbsp;Manually - Easy to forget.
-&nbsp;&nbsp;&nbsp;&nbsp;npm install - Issues may arise from packages at a later date (after it was installed).
-&nbsp;&nbsp;&nbsp;&nbsp;production build - Expensive to change.
-&nbsp;&nbsp;&nbsp;&nbsp;pull request - Expensive to change.
-&nbsp;&nbsp;&nbsp;&nbsp;npm start - Slows start slightly.
+* Manually - Easy to forget.
+* npm install - Issues may arise from packages at a later date (after it was installed).
+* production build - Expensive to change.
+* pull request - Expensive to change.
+* npm start - Slows start slightly.
 
 ## WEBSERVERS
 #### http-server
@@ -43,10 +43,39 @@ __Best times to run security checks on packages:__
 
 ## SHARING WORK-IN-PROGRESS
 #### localtunnel
-&nbsp;&nbsp;&nbsp;&nbsp;Very easy to get started, low friction level of learning and usage. Easiest, ultra-versatile.
+* Very easy to get started, low friction level of learning and usage. Easiest, ultra-versatile.
 #### ngrok
-&nbsp;&nbsp;&nbsp;&nbsp;Some additional features over localtunnel, takes more time to configure. Easy setup, secure.
+* Some additional features over localtunnel, takes more time to configure. Easy setup, secure.
 #### surge
-&nbsp;&nbsp;&nbsp;&nbsp;Assumes your app is just static HTML, JS, and CSS files. Only supports static files. No firewall hole, hosting persists.
+* Assumes your app is just static HTML, JS, and CSS files. Only supports static files. No firewall hole, hosting persists.
 #### now
-&nbsp;&nbsp;&nbsp;&nbsp;Easy way to deploy apps to the cloud, supports nodejs projects. No firewall hole, hosting persists.
+* Easy way to deploy apps to the cloud, supports nodejs projects. No firewall hole, hosting persists.
+
+##AUTOMATION
+We always want to automate our enviornment and builds whenever possible.
+
+#### Grunt
+* First JS Task runner
+* File oriented
+* Large plugin ecosystem
+* Configuration over code
+#### Gulp
+* In-memory streams (Gulp calls these pipes).
+* Fast
+* Code over configuration
+* Large plugin ecosystem
+#### npm Scripts
+* Declared in package.json
+* Leverage your OS' command line
+* Directly use npm packages
+* Call seperate Node scripts
+* Convention-based pre/post hooks
+* World's largest package manager
+* Use tools directly
+* No need for seperate plugins
+* Simpler debugging
+* Better docs
+* Easy to learn, simple
+
+
+
