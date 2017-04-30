@@ -16,8 +16,10 @@ the functionality built in to read file, some need a plugin (check editorconfig.
 
 ## PACKAGE SECURITY
 Options for security check:
-#### retire.js - I've not used this yet.
-#### nodesecuirty.io - To install globally: `npm install -g nsp` Then run NSP `nsp check` to scan pacakges. Does not need to be
+#### retire.js
+* I've not used this yet, more to come.
+#### nodesecuirty.io 
+* To install globally: `npm install -g nsp` Then run NSP `nsp check` to scan pacakges. Does not need to be
 installed globally. 
 
 Best times to run security checks on packages:
@@ -29,13 +31,13 @@ Best times to run security checks on packages:
 
 ## WEBSERVERS
 * #### http-server
-(not for use in production, only for development)
+..* (not for use in production, only for development)
 * #### live-server
-(not for use in produciton, only for development)
+..* (not for use in produciton, only for development)
 * #### express / koa / hapi
 * #### budo 
-(also a bundler)
+..* (also a bundler)
 * #### webpack 
-(also a bundler, comprehensive)
+..* (also a bundler, comprehensive)
 * #### Browsersync 
-(dedicated IP for sharing work on LAN, all interactions remain in sync, integrates with webpack, express)  
+..* (dedicated IP for sharing work on LAN, all interactions remain in sync, integrates with webpack, express)  
