@@ -179,7 +179,7 @@ Module formats/types in JS:
 * Can install from npm git
 * Uses Rollup in its builder
 
-### SOURCEMAPS
+#### SOURCEMAPS
 * Important tool to use when bundling.
 * Maps code back to original source (bundled, transpiled, minified code).
 * Part of the build.
@@ -189,7 +189,7 @@ Module formats/types in JS:
 ## LINTING
 We want to enforce consistency, and avoid mistakes - linters help us do this.
 
-### LINTERS
+#### LINTERS
 ##### __JSLint__
 * created by Douglas Crockford many years ago
 * extremely opinionated
@@ -264,7 +264,7 @@ __Key testing decisions:__
       * `fileName.test.js`
 
 6. Where should my tests run?
-  * unit tests should run when code is saved, rapid feedback loop, 
+  * unit tests should run when code is saved, rapid feedback loop
   * faciliates TDD
   * automatic tests = low friction
   * increases test visibility
@@ -285,15 +285,18 @@ __Why CI?__
 * can run tasks like code coverage
 * can automate deployment to production
 
-### CI SERVERS
-#### TravisCI - Linux based CI server, large ecosystem, hosted solution
+#### CI SERVERS
+##### TravisCI 
+* Linux based CI server, large ecosystem, hosted solution
 
-#### Appveyor - Windows based CI server
+##### Appveyor
+* Windows based CI server
 
-#### Jenkins - Popular, highly configurable, large ecosystem
+##### Jenkins
+* Popular, highly configurable, large ecosystem
 
-#### CircleCI
+##### CircleCI
 
-#### Semaphore
+##### Semaphore
 
-#### SnapCI
+##### SnapCI
