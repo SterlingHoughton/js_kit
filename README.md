@@ -221,7 +221,7 @@ eslint-watch adds file watching functionality to ESLint and offers enhanced comm
 
 *Babel-eslint lints stage 0-4 features (experimental JS features).
 
-## TESTING AND CONTINUOUS INTEGRATION
+## TESTING
 JavaScript Testing Styles: 
 
 |  __Style__  |           __Focus__           |
