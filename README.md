@@ -191,7 +191,7 @@ We want to enforce consistency, and avoid mistakes - linters help us do this.
 
 ### LINTERS
 ##### __JSLint__
-* cr eated by Douglas Crockford many years ago
+* created by Douglas Crockford many years ago
 * extremely opinionated
 
 ##### __JSHint__
@@ -258,7 +258,7 @@ __Key testing decisions:__
 
 5. Where do test files belong?
     * __Centralized__ (i.e. central tests within a folder 'tests' or something similar) - tests are completely seperate from source code. Avoids adding noise in src folder (tests aren't necessarily noise, they're complementary to the files that they're testing). Popular to create seperate test folder
-    * __Alongside__ (i.e. colocation of source and test files) - Easy imports, clear visibility, convenient to open, no recreating folder structure, easy file moves
+    * __Alongside__ (i.e. colocation of source and test files) - Easy imports, clear visibility, convenient to open, no recreating folder structure, easy file moves, one to one relationships with code and tests
     * Popular test file naming conventions: 
       * `fileName.spec.js`
       * `fileName.test.js`
@@ -270,4 +270,30 @@ __Key testing decisions:__
   * increases test visibility
   * should be extremely fast
 
+## CONTINUOUS INTEGRATION
+We want to be notified when someone breaks the build, we want to know instantly if the commit to code worked or broke something. Works as expected on another machine. A CI server catches mistakes quickly
 
+__Why CI?__
+* forgot to commit new file
+* forgot to update package.json
+* commit doesn't run cross-platform
+* node version conflictions
+* bad merge
+* didn't run tests after a change
+* CI servers build your application automatically the moment you commit
+* runs your test suite
+* can run tasks like code coverage
+* can automate deployment to production
+
+### CI SERVERS
+#### TravisCI - Linux based CI server, large ecosystem, hosted solution
+
+#### Appveyor - Windows based CI server
+
+#### Jenkins - Popular, highly configurable, large ecosystem
+
+#### CircleCI
+
+#### Semaphore
+
+#### SnapCI
