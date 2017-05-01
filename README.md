@@ -20,9 +20,12 @@ Options for security check:
 
 #### nodesecuirty.io
 * To install: 
+
 `npm install nsp`
+
 `nsp check` 
-Check/scans pacakges, will get results in consule if working. Can be installed globally.
+
+Checks/scans pacakges, will get results in terminal if working. Can be installed globally.
 
 __Best times to run security checks on packages:__
 * Manually - Easy to forget.
@@ -182,4 +185,38 @@ JSPM - Runtime loader, package manager
 * Part of the build
 * Only downloaded if you open developer tools (only d/ls when you need it)
 * There are several sourcemap configurations - chose one that works best for you / the application
- 
+
+## LINTING
+We want to enforce consistency, and avoid mistakes - linters help us do this.
+
+####LINTERS
+JSLint
+* created by Douglas Crockford many years ago
+* extremely opinionated
+
+JSHint
+* more configurability
+
+ESLint
+* Powerful and configurable
+* Popular
+
+Core steps for ESLint setup:
+1. Configuration file formats - 5 different file names currently supported (most universal approach for configuration file is creating a dedicated .eslintrc file in application root, or configure in package.json.) Creating dedicated .eslintrc file decouples config from package.json/npm.
+2. Choosing what rules to enable - ESLint catches dozens of potential errors out of the box. Choose what rules work for you as a team.
+3. Warnings or errors? 
+  * Warnings - doesn't break the build, can be ignored but still not acceptable: FIX WARNINGS
+  * Errors - breaks the build, can't be ignored, team is forced to comply because it won't build
+4. Which plugins? - ESLint has a great list of configs, plugins, parsers and more.
+5. Use presets? - start from scratch, ESLint recommendeded presets, standard rules, airbnb/XO/standardJS presets
+
+Babel-eslint lints stage 0-4 features (experimental JS features)
+
+Why Lint via an Automated Build Process?
+* One place to check for all feedback related to code quality
+* Universal configuration
+* Part of continuous integration (part of the build process)
+
+If working with TypeScript, use TSLint until ESLint adds support for TypeScript (no other linter provides support for TS as of now 4/30/17)
+
+eslint-watch adds file watching functionality to ESLint and offers enhanced commandline output
