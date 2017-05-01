@@ -13,8 +13,9 @@ Strong support for javascript features, including:
 ### EDITORCONFIG FILE
 Create .editorconfig file in the root of the project. You can specify settings for code here. Some editors have the functionality built in to read file, some need a plugin (check editorconfig.org for details).
 
-### PACKAGE SECURITY
-Options for security check:
+## PACKAGE SECURITY
+We want to insure all packages used in our app our secure. Options for security check:
+
 #### retire.js
 * I've not used this yet, more to come.
 
