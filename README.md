@@ -17,8 +17,13 @@ Create .editorconfig file in the root of the project. You can specify settings f
 Options for security check:
 #### retire.js
 * I've not used this yet, more to come.
+
 #### nodesecuirty.io
-* To install globally: `npm install nsp` Then run NSP `nsp check` to scan pacakges. Can be installed globally.
+* To install: 
+`npm install nsp`
+`nsp check` 
+Check/scans pacakges, will get results in consule if working. Can be installed globally.
+
 __Best times to run security checks on packages:__
 * Manually - Easy to forget.
 * npm install - Issues may arise from packages at a later date (after it was installed).
@@ -29,23 +34,32 @@ __Best times to run security checks on packages:__
 ## WEBSERVERS
 #### http-server
 * (not for use in production, only for development)
+
 #### live-server
 * (not for use in produciton, only for development)
+
 #### express / koa / hapi
+* Robust, production ready (especially express/hapi)
+
 #### budo
 * (also a bundler)
+
 #### webpack
 * (also a bundler, comprehensive)
+
 #### Browsersync
 * (dedicated IP for sharing work on LAN, all interactions remain in sync, integrates with webpack, express)
 
 ## SHARING WORK-IN-PROGRESS
 #### localtunnel
 * Very easy to get started, low friction level of learning and usage. Easiest, ultra-versatile
+
 #### ngrok
 * Some additional features over localtunnel, takes more time to configure. Easy setup, secure
+
 #### surge
 * Assumes your app is just static HTML, JS, and CSS files. Only supports static files. No firewall hole, hosting persists
+
 #### now
 * Easy way to deploy apps to the cloud, supports nodejs projects. No firewall hole, hosting persists
 
@@ -57,11 +71,13 @@ We always want to automate our enviornment and builds whenever possible
 * File oriented
 * Large plugin ecosystem
 * Configuration over code
+
 #### Gulp
 * In-memory streams (Gulp calls these pipes).
 * Fast
 * Code over configuration
 * Large plugin ecosystem
+
 #### npm Scripts
 * Declared in package.json
 * Leverage your OS' command line
@@ -118,6 +134,7 @@ __PRESETS__ (transpile for your environment):
 * Enhanced autocompletion / readability
 * Clearer intent
 * some tools can't use TypeScript
+
 #### Elm
 * Compiles down to JS
 * Clean Syntax
