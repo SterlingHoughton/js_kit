@@ -27,12 +27,12 @@ Options for security check:
 
 Checks/scans pacakges, will get results in terminal if working. Can be installed globally.
 
-__Best times to run security checks on packages:__
-* Manually - Easy to forget.
-* npm install - Issues may arise from packages at a later date (after it was installed).
-* production build - Expensive to change.
-* pull request - Expensive to change.
-* npm start - Slows start slightly.
+__Running security checks on packages:__
+* Manually - Easy to forget
+* npm install - Issues may arise from packages at a later date (after it was installed)
+* production build - Expensive to change
+* pull request - Expensive to change
+* npm start - Slows start slightly
 
 ## WEBSERVERS
 #### http-server
@@ -50,24 +50,24 @@ __Best times to run security checks on packages:__
 #### webpack
 * (also a bundler, comprehensive)
 
-#### Browsersync
+### Browsersync
 * (dedicated IP for sharing work on LAN, all interactions remain in sync, integrates with webpack, express)
 
 ## SHARING WORK-IN-PROGRESS
 #### localtunnel
-* Very easy to get started, low friction level of learning and usage. Easiest, ultra-versatile
+* Very easy to get started, low friction level of learning and usage. Easiest, ultra-versatile.
 
 #### ngrok
-* Some additional features over localtunnel, takes more time to configure. Easy setup, secure
+* Some additional features over localtunnel, takes more time to configure. Easy setup, secure.
 
 #### surge
-* Assumes your app is just static HTML, JS, and CSS files. Only supports static files. No firewall hole, hosting persists
+* Assumes your app is just static HTML, JS, and CSS files. Only supports static files. No firewall hole, hosting persists.
 
 #### now
-* Easy way to deploy apps to the cloud, supports nodejs projects. No firewall hole, hosting persists
+* Easy way to deploy apps to the cloud, supports nodejs projects. No firewall hole, hosting persists.
 
 ## AUTOMATION
-We always want to automate our enviornment and builds whenever possible
+We always want to automate our enviornment and builds whenever possible.
 
 #### Grunt
 * First JS Task runner
@@ -126,7 +126,7 @@ Two configuration styles:
 `package.json`
 * One less file to your project
 
-__PRESETS__ (transpile for your environment):
+__Babel Presets__ (transpile for your environment):
 
 * `babel-preset-es2015-node` - Version Detection
 * `babel-preset-latest-minimal` - Feature Detection 
@@ -155,68 +155,119 @@ Module formats/types in JS:
 * ES6 Modules 
 
 #### BUNDLERS
-Browserify - simple, approachable (can be used with Rollup via plugin)
+##### Browserify - simple, approachable (can be used with Rollup via plugin)
 * First bundler to reach mass adoption
 * Bundle npm packages for the web (code that uses the CommonJS pattern)
 * Large plugin ecosystem
 
-Webpack - Comprehensive
+##### __Webpack__ - Comprehensive
 * Bundles more than just JS - import CSS, images, fonts, etc like JS
 * Built in hot-reloading web server
 * Bundle splitting
 
-Rollup
+##### __Rollup__
 * Tree shaking (dead code elimination)
 * Faster loading production code
 * Quite new
 * Great for library authors
 * No hot reloading and code splitting yet
 
-JSPM - Runtime loader, package manager
+##### __JSPM__ - Runtime loader, package manager
 * Uses SystemJS, a universal module loader
 * Can load modules at runtime
 * Has its own package manager
 * Can install from npm git
 * Uses Rollup in its builder
 
-#### SOURCEMAPS
-* Important tool to use when bundling
-* Maps code back to original source (bundled, transpiled, minified code)
-* Part of the build
-* Only downloaded if you open developer tools (only d/ls when you need it)
-* There are several sourcemap configurations - chose one that works best for you / the application
+### SOURCEMAPS
+* Important tool to use when bundling.
+* Maps code back to original source (bundled, transpiled, minified code).
+* Part of the build.
+* Only downloaded if you open developer tools (only d/ls when you need it).
+* There are several sourcemap configurations - chose one that works best for you / the application.
 
 ## LINTING
 We want to enforce consistency, and avoid mistakes - linters help us do this.
 
-####LINTERS
-JSLint
-* created by Douglas Crockford many years ago
+### LINTERS
+##### __JSLint__
+* cr eated by Douglas Crockford many years ago
 * extremely opinionated
 
-JSHint
+##### __JSHint__
 * more configurability
 
-ESLint
+##### __ESLint__
 * Powerful and configurable
 * Popular
 
-Core steps for ESLint setup:
+__Core steps for ESLint setup:__
 1. Configuration file formats - 5 different file names currently supported (most universal approach for configuration file is creating a dedicated .eslintrc file in application root, or configure in package.json.) Creating dedicated .eslintrc file decouples config from package.json/npm.
-2. Choosing what rules to enable - ESLint catches dozens of potential errors out of the box. Choose what rules work for you as a team.
+2. Choosing what rules to enable - ESLint catches dozens of potential errors out of the box. Choose what rules work for you as a team or per project etc.
 3. Warnings or errors? 
-  * Warnings - doesn't break the build, can be ignored but still not acceptable: FIX WARNINGS
-  * Errors - breaks the build, can't be ignored, team is forced to comply because it won't build
+    * __Warnings__ - doesn't break the build, can be ignored but still not acceptable: FIX WARNINGS
+    * __Errors__ - breaks the build, can't be ignored, team is forced to comply because it won't build
 4. Which plugins? - ESLint has a great list of configs, plugins, parsers and more.
 5. Use presets? - start from scratch, ESLint recommendeded presets, standard rules, airbnb/XO/standardJS presets
 
-Babel-eslint lints stage 0-4 features (experimental JS features)
-
-Why Lint via an Automated Build Process?
+__Why Lint via an Automated Build Process?__
 * One place to check for all feedback related to code quality
 * Universal configuration
 * Part of continuous integration (part of the build process)
 
-If working with TypeScript, use TSLint until ESLint adds support for TypeScript (no other linter provides support for TS as of now 4/30/17)
+If working with TypeScript, use TSLint until ESLint adds support for TypeScript (no other linter provides support for TS as of now 4/30/17).
 
-eslint-watch adds file watching functionality to ESLint and offers enhanced commandline output
+eslint-watch adds file watching functionality to ESLint and offers enhanced commandline output.
+
+*Babel-eslint lints stage 0-4 features (experimental JS features).
+
+## TESTING AND CONTINUOUS INTEGRATION
+JavaScript Testing Styles: 
+
+|  __Style__  |           __Focus__           |
+|:-----------:|:-----------------------------:|
+| Unit        | single funciton or module     |
+| Integration | interactions between modules  |
+| UI          | automate interactions with UI |
+
+__Key testing decisions:__
+
+1. Testing Frameworks (pick which frameworks work for you, will be different between developers, teams, etc)
+    * __Mocha__ - Most popular, highly configurable, large ecosystem, mature, flexible
+    * __Jasmine__ - includes an assertion library built in
+    * __Tape__ - leanest and simplist, minimal configuration
+    * __QUnit__ - oldest on the list, tests jQuery
+    * __AVA__ - runs tests in parallel, and only reruns impacted tests - speedy
+    * __Jest__ - wrapper over Jasmine, useful for anyone, has code coverage, JSDOM, and popular conventions for finding test files all built in
+
+2. Assertion Libraries (way to declare what you expect)
+    * __Chai__ - most popular
+    * __Should.js__ 
+    * __expect__ 
+
+3. Helper Libraries:
+    * __JSDOM__ - simulates the browser's DOM, can run DOM-related tests without a browser (implementation of the browser's DOM that can run in node.js)
+    * __Cheerio__ - jQuery for the server, query virtual DOM using jQuery selectors. Asserting that certain HTML is where you expect it. Uses jQuery selectors for querying the DOM
+    
+4. Where to run tests?
+  * Browser - __Karma__, __Testem__
+  * Headless Browser (Headless browser - browser that doesn't have a visible interface)
+    * __PhantomJS__ - a full real browser running the V8 JS engine behind the scenes, has no visible interface.
+  * In-memory DOM
+    * __JSDOM__ - doesn't have a full browser behind the scene, focused on simulating a DOM in memory
+
+5. Where do test files belong?
+    * __Centralized__ (i.e. central tests within a folder 'tests' or something similar) - tests are completely seperate from source code. Avoids adding noise in src folder (tests aren't necessarily noise, they're complementary to the files that they're testing). Popular to create seperate test folder
+    * __Alongside__ (i.e. colocation of source and test files) - Easy imports, clear visibility, convenient to open, no recreating folder structure, easy file moves
+    * Popular test file naming conventions: 
+      * `fileName.spec.js`
+      * `fileName.test.js`
+
+6. Where should my tests run?
+  * unit tests should run when code is saved, rapid feedback loop, 
+  * faciliates TDD
+  * automatic tests = low friction
+  * increases test visibility
+  * should be extremely fast
+
+
