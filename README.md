@@ -51,7 +51,7 @@ __Running security checks on packages:__
 #### webpack
 * (also a bundler, comprehensive)
 
-### Browsersync
+#### Browsersync
 * (dedicated IP for sharing work on LAN, all interactions remain in sync, integrates with webpack, express)
 
 ## SHARING WORK-IN-PROGRESS
@@ -151,7 +151,7 @@ __Babel Presets__ (transpile for your environment):
 Module formats/types in JS:
 * IIFE
 * Asynchronous Module Definition (AMD)
-* CommonJS(CJS)
+* CommonJS (CJS)
 * Universal Module Definition (UMD)
 * ES6 Modules 
 
