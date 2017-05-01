@@ -1,6 +1,6 @@
 # Javascript starter kit V1.0
 
-## EDITOR AND EDITORCONFIG RULES
+### EDITOR AND EDITORCONFIG RULES
 Everyone on team uses same critical editor settings (space vs tabs, line endings etc.)
 Strong support for javascript features, including:
 * Autocompletion
@@ -10,10 +10,10 @@ Strong support for javascript features, including:
 * Framework Intelligence
 * Built-in terminal
 
-## EDITORCONFIG FILE
+### EDITORCONFIG FILE
 Create .editorconfig file in the root of the project. You can specify settings for code here. Some editors have the functionality built in to read file, some need a plugin (check editorconfig.org for details).
 
-## PACKAGE SECURITY
+### PACKAGE SECURITY
 Options for security check:
 #### retire.js
 * I've not used this yet, more to come.
