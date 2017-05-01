@@ -139,16 +139,19 @@ Browserify - simple, approachable (can be used with Rollup via plugin)
 * First bundler to reach mass adoption
 * Bundle npm packages for the web (code that uses the CommonJS pattern)
 * Large plugin ecosystem
+
 Webpack - Comprehensive
 * Bundles more than just JS - import CSS, images, fonts, etc like JS
 * Built in hot-reloading web server
 * Bundle splitting
+
 Rollup
 * Tree shaking (dead code elimination)
 * Faster loading production code
 * Quite new
 * Great for library authors
 * No hot reloading and code splitting yet
+
 JSPM - Runtime loader, package manager
 * Uses SystemJS, a universal module loader
 * Can load modules at runtime
