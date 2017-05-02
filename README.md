@@ -301,3 +301,66 @@ __Why CI?__
 ##### Semaphore
 
 ##### SnapCI
+
+## HTTP
+__HTTP call approaches:__
+
+##### Node
+* http - built in node package, low level library that provides basic functionality for making HTTP requests 
+* request - popular higher level library, makes it simpler to make request calls in Node. Streamlined API
+
+##### Browser
+* XMLHttpRequest (XHR) 
+* jQuery 
+* Framework-based 
+* Fetch - standard propsed by the Web Hypertext Application Technology Working Group. Streamlined API, some browsers lack native support (use a polyfill with this option). Polyfills exist for isomorphic version of Fetch. Can't cancel a fetch currently, but actively being worked on
+
+##### Node & Browser
+* isomorphic-fetch - npm package that provides a Fetch-like API that runs on a server via Node and in the browser
+* xhr - npm package that provides a subset of the request library that runs on both Node and the browser
+* SuperAgent - full featured option, plugin ecosystem
+* Axios - full featured option, promised based API
+
+__Centralizie API calls__
+* single place to configure all calls
+* handle preloader logic
+* central place for all errors
+* single seam for mocking API
+
+If you want to send a polyfill only to browsers that need it, use a service called __Polyfill.io__ (has a wide array of polyfills)
+
+#### MOCKING APIs (HTTP)
+__Why mock HTTP?__
+* unit testing
+* instant response
+* keep working when services are down
+* rapid prototyping
+* avoid inter-team bottlenecks
+* work offline
+
+__How to mock HTTP:__
+* __Nock__ - mock http calls on your unit tests
+* Static JSON file 
+* create a development webserver that mocks out a real API
+    * __api-mock__
+    * __JSON server__ - provides full simulation of a real working API against local mock data 
+    * __JSON Schema faker__ - creates/generates fake data for you
+* open source libraries for fake data generation
+    * __faker.js__
+    * __chance.js__
+    * __randexp.js__
+    
+One could also wire up a fake API using a development webserver of choice, this will be the most work and provide the most power. A solid service layer and DB already hooked up will help with this option.
+
+JSON schema is a standard for describing a JSON data format. Many standards for describing JSON structures:
+* JSON schema
+* JSON Content Rules
+* JSON LD
+* Falcor (API related)
+* GraphQL (API related)
+* RAML
+
+json-schema-faker.js.org - JSON schema faker REPL
+
+Changing data helps for viewing different potential edge cases in the system, empty lists, long values, provides data for testing, filtering, sorting and so on.
+
